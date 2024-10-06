@@ -1,3 +1,0 @@
-file(REMOVE_RECURSE
-  "libSRCS_STATIC.a"
-)

@@ -1,4 +1,0 @@
-/home/yihan/task01/build/CMakeFiles/rebuild_cache.dir
-/home/yihan/task01/build/CMakeFiles/task.dir
-/home/yihan/task01/build/CMakeFiles/edit_cache.dir
-/home/yihan/task01/build/CMakeFiles/SRCS_STATIC.dir

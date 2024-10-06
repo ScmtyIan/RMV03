@@ -1,0 +1,96 @@
+Determining if the function sgemm_ exists failed with the following output:
+Change Dir: /home/yihan/task01/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_d2720/fast && /usr/bin/make -f CMakeFiles/cmTC_d2720.dir/build.make CMakeFiles/cmTC_d2720.dir/build
+make[1]: Entering directory '/home/yihan/task01/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_d2720.dir/CheckFunctionExists.c.o
+/usr/bin/gcc   -DCHECK_FUNCTION_EXISTS=sgemm_   -o CMakeFiles/cmTC_d2720.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_d2720
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d2720.dir/link.txt --verbose=1
+/usr/bin/gcc  -DCHECK_FUNCTION_EXISTS=sgemm_    -rdynamic CMakeFiles/cmTC_d2720.dir/CheckFunctionExists.c.o  -o cmTC_d2720 
+/usr/bin/ld: CMakeFiles/cmTC_d2720.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x14): undefined reference to `sgemm_'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_d2720.dir/build.make:87: cmTC_d2720] Error 1
+make[1]: Leaving directory '/home/yihan/task01/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_d2720/fast] Error 2
+
+
+
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/yihan/task01/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_3418d/fast && /usr/bin/make -f CMakeFiles/cmTC_3418d.dir/build.make CMakeFiles/cmTC_3418d.dir/build
+make[1]: Entering directory '/home/yihan/task01/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_3418d.dir/src.c.o
+/usr/bin/gcc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_3418d.dir/src.c.o   -c /home/yihan/task01/build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_3418d
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3418d.dir/link.txt --verbose=1
+/usr/bin/gcc  -DCMAKE_HAVE_LIBC_PTHREAD    -rdynamic CMakeFiles/cmTC_3418d.dir/src.c.o  -o cmTC_3418d 
+/usr/bin/ld: CMakeFiles/cmTC_3418d.dir/src.c.o: in function `main':
+src.c:(.text+0x46): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x63): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_3418d.dir/build.make:87: cmTC_3418d] Error 1
+make[1]: Leaving directory '/home/yihan/task01/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_3418d/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/yihan/task01/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_89c58/fast && /usr/bin/make -f CMakeFiles/cmTC_89c58.dir/build.make CMakeFiles/cmTC_89c58.dir/build
+make[1]: Entering directory '/home/yihan/task01/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_89c58.dir/CheckFunctionExists.c.o
+/usr/bin/gcc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_89c58.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_89c58
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_89c58.dir/link.txt --verbose=1
+/usr/bin/gcc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_89c58.dir/CheckFunctionExists.c.o  -o cmTC_89c58  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_89c58.dir/build.make:87: cmTC_89c58] Error 1
+make[1]: Leaving directory '/home/yihan/task01/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_89c58/fast] Error 2
+
+
+
+Determining if the function cheev_ exists failed with the following output:
+Change Dir: /home/yihan/task01/build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_9d620/fast && /usr/bin/make -f CMakeFiles/cmTC_9d620.dir/build.make CMakeFiles/cmTC_9d620.dir/build
+make[1]: Entering directory '/home/yihan/task01/build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_9d620.dir/CheckFunctionExists.c.o
+/usr/bin/gcc   -DCHECK_FUNCTION_EXISTS=cheev_   -o CMakeFiles/cmTC_9d620.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_9d620
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9d620.dir/link.txt --verbose=1
+/usr/bin/gcc  -DCHECK_FUNCTION_EXISTS=cheev_    -rdynamic CMakeFiles/cmTC_9d620.dir/CheckFunctionExists.c.o  -o cmTC_9d620  /usr/lib/x86_64-linux-gnu/libf77blas.so /usr/lib/x86_64-linux-gnu/libatlas.so 
+/usr/bin/ld: CMakeFiles/cmTC_9d620.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x14): undefined reference to `cheev_'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_9d620.dir/build.make:89: cmTC_9d620] Error 1
+make[1]: Leaving directory '/home/yihan/task01/build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_9d620/fast] Error 2
+
+
+

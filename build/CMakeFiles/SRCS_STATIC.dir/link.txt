@@ -1,0 +1,2 @@
+/usr/bin/ar qc libSRCS_STATIC.a  CMakeFiles/SRCS_STATIC.dir/src/DataFitting.cpp.o CMakeFiles/SRCS_STATIC.dir/src/GetPoint.cpp.o CMakeFiles/SRCS_STATIC.dir/src/windmill.cpp.o
+/usr/bin/ranlib libSRCS_STATIC.a
